@@ -31,6 +31,7 @@ Commands:
 Options:
   -?, --help        Show help                                          [boolean]
   --timeout         Timeout for scan (in seconds)                   [default: 0]
+  --filter          filter to a specific class of devices (ie: IOT.SMARTBULB)
   --transition, -t  Transition time (for on/off)                    [default: 0]
   --hue, -h         Hue of lightbulb (for on)
   --saturation, -s  Saturation of color (for on)
@@ -119,6 +120,11 @@ After I did stuff like switch the lights on/off in app, I open the pcap file in 
 Scan for lightbulbs on your network
 
 **Returns**: <code>EventEmitter</code> - Emit `light` events when lightbulbs are found  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| filter | <code>string</code> | Only return devices with this class, (ie 'IOT.SMARTBULB') |
+
 **Example**  
 ```js
 // turn first discovered light off
